@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7c2d6c676e.js" crossorigin="anonymous"></script>
+    <link rel="shortcup icon" href="{{ url_for('static',filename= 'img/logito.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename= 'styles/normalize.css') }}">
+    <link href='https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap' rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'styles/styles.css') }}">
+    <title>Comparador de planes de estudio</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="contenedor-header">
+            <div class="navegacion-principal">
+                <div class="imagen">
+                    <a href="#">
+                        <img src="{{ url_for('static', filename= 'img/logo.png') }}" alt="logo">
+                    </a>
+
+                </div>
+                <nav>
+                    <a href="#">Inicio</a>
+                    <a href="#">Como Funciona</a>
+                    <a href="#">Comparador</a>
+                </nav>
+            </div>
+            <div class="contenido-header">
+                <div class="imagen-header">
+                    <img src="{{ url_for('static', filename= 'img/nomad.png') }}" alt="Imagen">
+                </div>
+                <div class="encabezados">
+                    <h1>Comparador de planes de estudio</h1>
+                    <h2>Compara entre dos planes de estudio y ve sus diferencias</h2>
+                    <h3>Facultad de Informatica | UNLP</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="contenedor-main">
+            <h2>Comparador</h2>
+            <div class="formulario">
+                <form action="/comparar" method= "POST">
+                    <div class="planes">
+                        <label for="plan1">Coloque el link del primer plan a comparar:</label>
+                        <input placeholder="Ej: plan de estudios de Lic. en Sistemas" type="text" name="plan1" id="plan1">
+                    </div>
+                    <div class="planes">
+                        <label for="plan2">Coloque el link del segundo plan a comparar:</label>
+                        <input placeholder="Ej: plan de estudios de Lic. en Informatica" type="text" name="plan2" id="plan2">
+                    </div>
+                    <input class="boton" type="submit" name="enter" id="enter" value="Comparar" style="cursor:pointer">
+
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="contenedor contenido-footer">
+            <p>Todos los derechos reservados &copy; 2020</p>
+            <div class="iconos">
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a class="no-margin" href="#">
+                    <i class="fab fa-github"></i>
+                </a>
+
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
